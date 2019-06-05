@@ -1,0 +1,64 @@
+<div class="container">
+  <div class="col-md-9">
+      <h3>Registro Factura</h3>
+  </div>
+  <div class="factura">
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th>Cliente</th>
+      <th>Empleado</th>
+      <th>Tipo Pago</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+              <td><input type="number" class="form-control" [(ngModel)] = "cliente" /></td>
+              <td><input type="number" class="form-control" [(ngModel)] = "empleado" /></td>
+              <td><input type="number" class="form-control" [(ngModel)] = "tipoPago"/></td>
+          </tr>  
+                              
+    </tbody>
+  </table>
+  </div>
+  <div class="col-md-9" >
+      <h3>Factura detalle</h3>
+  </div>
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th>cantidad</th>
+      <th>Producto</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+              <td><input type="number" class="form-control" [(ngModel)] = "producto"/></td>
+              <td><input type="number" class="form-control" [(ngModel)] = "cantidad"/></td>
+          </tr>  
+                              
+    </tbody>
+  </table>
+  <div>
+      <button type="button" class="btn btn-success" (click)= "agregarProducto()">Agregar</button>
+      <button type="button" class="btn btn-success" routerLink = "/productos"> Ver Productos</button>
+  </div>
+  <div class="Agregar">
+    <h3>Productos agregados</h3>
+  </div>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Cantidad</th>
+        <th scope="col">Producto</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let resgistros of listaProductos">
+        <td>{{resgistros.cantidad}}</td>
+        <td>{{resgistros.producto.codigo}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <button type="button" class="btn btn-info" (click) = "saveFacturaGenerar()" >Guardar Factura</button>
+</div>
