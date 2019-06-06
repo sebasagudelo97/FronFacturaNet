@@ -1,17 +1,17 @@
-import { ModelProducto } from './../model/model-productoDTO';
+import { ModelProducto } from '../modelo/productoDTO';
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../service/user-service';
-import { ModelUsuario } from '../model/model-usuarioDTO';
+import { ServicioUsuario } from '../Conexion/servicioUsuario';
+
 
 @Component({
   selector: 'app-productos',
   templateUrl: './productos.component.html',
-  providers: [UserService]
+  providers: [ServicioUsuario]
   
 })
 export class ProductosComponent implements OnInit {
   public productos: Array<ModelProducto>;
-  constructor(private userService: UserService){}
+  constructor(private userService: ServicioUsuario){}
 
   ngOnInit(){
     this.loadUsers();

@@ -1,4 +1,4 @@
-import {ModelPais} from './model-paisDTO'
+import {ModelPais} from './paisDTO'
 
 export class ModelDepartamento{
     private codigo: number;

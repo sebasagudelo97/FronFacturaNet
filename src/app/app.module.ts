@@ -8,8 +8,6 @@ import { FacturaComponent } from './facturas/facturas.component';
 import { Routes, RouterModule } from '@angular/router';
 import {FormsModule} from "@angular/forms";
 import { ingresoFacturaComponent } from './ingreso-factura/ingreso-factura.component';
-import { FilterPipe } from './pipes/filter.pipe';
-import { UsuariosComponent } from './usuarios/usuarios.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductosComponent } from './productos/productos.component';
 
@@ -26,8 +24,6 @@ const routes: Routes = [
     AppComponent,
     FacturaComponent,
     ingresoFacturaComponent,
-    FilterPipe,
-    UsuariosComponent,
     ProductosComponent
   ],
   imports: [

@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { ModelFactura } from '../model/model-facturaDTO';
-import { ModelDetalleFactura } from '../model/model-detalleFacturaDTO';
-import { createFacturaService } from '../service/createFactura-service';
-import { UserService } from '../service/user-service';
-import { ModelProducto } from '../model/model-productoDTO';
+import { ModelFactura } from '../modelo/facturaDTO';
+import { ModelDetalleFactura } from '../modelo/detalleFacturaDTO';
+import { conexionFactura } from '../Conexion/conexionFactura';
+import { ServicioUsuario } from '../Conexion/servicioUsuario';
+import { ModelProducto } from '../modelo/productoDTO';
 
 @Component({
   selector: 'ing-factura',
   templateUrl: './ingreso-factura.component.html',
-  providers:[createFacturaService,UserService]
+  providers:[conexionFactura,ServicioUsuario]
   
 })
 export class ingresoFacturaComponent implements OnInit{
@@ -23,7 +23,7 @@ export class ingresoFacturaComponent implements OnInit{
   listaProductos =[]
   private productos: Array<ModelProducto>;
 
-  constructor(private createFacturaService: createFacturaService, private userService: UserService){
+  constructor(private conexionFacturaService: conexionFactura, private userService: ServicioUsuario){
     this.factura = new ModelFactura();
     this.detalle = new ModelDetalleFactura;
     
@@ -42,7 +42,7 @@ export class ingresoFacturaComponent implements OnInit{
     this.factura.tipoPago = {codigo: this.tipoPago}
     this.factura.listaProductos = this.listaProductos;
     console.log(this.listaProductos);
-    this.createFacturaService.saveFacturaGenerar(this.factura).subscribe(res =>{
+    this.conexionFacturaService.saveFacturaGenerar(this.factura).subscribe(res =>{
       alert("Factura creada satisfactoriamente.")
       console.log(this.factura);
     });

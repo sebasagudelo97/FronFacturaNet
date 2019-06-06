@@ -1,5 +1,5 @@
-import {ModelCiudad} from './model-ciudadDTO';
-import {ModelTipoIdentificacion} from './model-tipoIdentificacionDTO';
+import {ModelCiudad} from './ciudadDTO';
+import {ModelTipoIdentificacion} from './tipoIdentificacionDTO';
 
 export class ModelUsuario {
     private codigo: number;

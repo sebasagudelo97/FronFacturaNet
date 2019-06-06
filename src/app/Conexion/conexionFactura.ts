@@ -1,15 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Observable, from } from 'rxjs';
 import {HttpClient, HttpHeaders} from '@angular/common/http'
+import { ModelFactura } from '../modelo/facturaDTO';
 
-import { ModelFactura } from '../model/model-facturaDTO';
-import { ModeloRespuesta } from '../model/model-respuesta';
-import { ModelPais } from '../model/model-paisDTO';
 
 
 
 @Injectable()
-export class createFacturaService{
+export class conexionFactura{
 
     headers = new HttpHeaders({'Content-Type':'application/json'});
     constructor(private http:HttpClient){

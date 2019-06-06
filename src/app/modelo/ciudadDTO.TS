@@ -1,4 +1,4 @@
-import { ModelDepartamento } from './model-departamentoDto';
+import { ModelDepartamento } from './departamentoDTO';
 export class ModelCiudad{
     private codigo: number;
 	private nombre: String;

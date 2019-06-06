@@ -1,4 +1,4 @@
-import { ModelFactura } from './model-facturaDTO';
+import { ModelFactura } from './facturaDTO';
 
 export class ModeloRespuesta{
     private datos: Array<ModelFactura>;

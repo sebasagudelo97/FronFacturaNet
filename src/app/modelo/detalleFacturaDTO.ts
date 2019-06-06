@@ -1,5 +1,5 @@
-import {ModelProducto} from './model-productoDTO';
-import {ModelFactura} from './model-facturaDTO';
+import {ModelProducto} from './productoDTO';
+import {ModelFactura} from './facturaDTO';
 
 export class ModelDetalleFactura{
     private codigo: number;

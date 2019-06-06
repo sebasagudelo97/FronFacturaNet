@@ -1,6 +1,6 @@
-import {ModelUsuario} from './model-usuarioDTO';
-import {ModelTipoPago} from './model-tipoPagoDTO';
-import { ModelDetalleFactura } from './model-detalleFacturaDTO';
+import {ModelUsuario} from './usuarioDTO';
+import {ModelTipoPago} from './tipoPagoDTO';
+import { ModelDetalleFactura } from './detalleFacturaDTO';
 
 export class ModelFactura {
     private codigo: number;

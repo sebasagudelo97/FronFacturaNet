@@ -41,7 +41,7 @@
   </table>
   <div>
       <button type="button" class="btn btn-success" (click)= "agregarProducto()">Agregar</button>
-      <button type="button" class="btn btn-success" routerLink = "/productos"> Ver Productos</button>
+      <button type="button" class="btn btn-success" routerLink = "/ingresoFactura/productos" > Ver Productos</button>
   </div>
   <div class="Agregar">
     <h3>Productos agregados</h3>
@@ -54,9 +54,10 @@
       </tr>
     </thead>
     <tbody>
+      
       <tr *ngFor="let resgistros of listaProductos">
-        <td>{{resgistros.cantidad}}</td>
         <td>{{resgistros.producto.codigo}}</td>
+        <td>{{resgistros.cantidad}}</td>
       </tr>
     </tbody>
   </table>
